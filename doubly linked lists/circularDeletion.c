@@ -53,6 +53,7 @@ int main(){
         head->prev=temp->prev;
         free(temp);
         temp = head->prev;
+        break;
     }
     
     default: printf("Invalid choice! ");
