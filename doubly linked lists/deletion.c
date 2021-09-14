@@ -38,6 +38,7 @@ int main(){
         return 0;
     }
     temp=head;
+    if(del!=1){
     for(int i=1;i<del;i++){
         temp=temp->next;
     }
@@ -45,6 +46,13 @@ int main(){
     temp->next->prev = temp->prev;
     free(temp);
     temp=head;
+    }
+    else{
+        head=head->next;
+        head->prev=NULL;
+        free(temp);
+        temp=head;
+    }
     while(temp){
         printf("%d ", temp->data);
         temp=temp->next;
